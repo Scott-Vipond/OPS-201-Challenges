@@ -8,8 +8,10 @@
 # Basic function
 print_something () {
   echo "Hello I am a function that displays the login history"
-}
-var="Ubuntu Server User Login History"
+
+  var="Ubuntu Server User Login History"
 echo $var
 last
+}
+
 print_something
