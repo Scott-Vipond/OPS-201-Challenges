@@ -5,13 +5,13 @@
 # Date of latest revision:   10 Nov 22
 # Purpose:                   Make directories, put directories in array, add txt file to each array index
 
-#Write a script that:
+# Write a script that:
 
-    #Review the process for creating a new directory.
-    #Create four directories using the script.
-    #Load each directory path into an array.
-    #Create a new .txt file within each directory by referencing the directory with array indices, not the literal directory path.
-    #Test & validate.
+    # Review the process for creating a new directory.
+    # Create four directories using the script.
+    # Load each directory path into an array.
+    # Create a new .txt file within each directory by referencing the directory with array indices, not the literal directory path.
+    # Test & validate.
 
 
 # Bascic function
@@ -20,15 +20,19 @@ lab04_challenge () {
 
 my_array=(dir1 dir2 dir3 dir4) 
 
+# touch /home/server/OPS-201-Challenges/dir1/newfile.txt - provides entire path
+# ./dir1/newfile.txt - provides a shorter path
+# ${my_array[0]} - the entire syntax is needed to address the dir1 index in the array
+
 touch ./${my_array[0]}/newfile.txt
 touch ./${my_array[1]}/newfile.txt
 touch ./${my_array[2]}/newfile.txt
 touch ./${my_array[3]}/newfile.txt
 
-#cp new.txt dir1 - was not in the spirit of tasks
-#cp new.txt dir2 - was not in the spirit of tasks
-#cp new.txt dir3 - was not in the spirit of tasks
-#cp new.txt dir4 - was not in the spirit of tasks
+# cp new.txt dir1 - was not in the spirit of tasks
+# cp new.txt dir2 - was not in the spirit of tasks
+# cp new.txt dir3 - was not in the spirit of tasks
+# cp new.txt dir4 - was not in the spirit of tasks
 
 # The OPS Challange task states create a new .txt file within each directory
 # by referencing the directory with array indices, not the literal directory path
@@ -36,7 +40,7 @@ touch ./${my_array[3]}/newfile.txt
 # my_array[1], my_array[2], and my_array[3]
 # FINALLY with Ethans teasing of the answer I was able to make it work
 
-#rm -r new.txt
+# rm -r new.txt - was used initially because challenge was coded for objective not tasks
 
 ls dir1
 ls dir2
