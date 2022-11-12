@@ -13,10 +13,12 @@
   # Use a loop in your script
     # This loop will facilitate the menu system of your script, so that it can prompt the user to choose an option
 
-# https://ryanstutorials.net/bash-scripting-tutorial/bash-loops.php - reference site
-# https://codefellows.github.io/ops-201-guide/curriculum/class-05/challenges/demo/bash.html - reference site
+# Reference sites below:
+# https://ryanstutorials.net/bash-scripting-tutorial/bash-loops.php
+# https://codefellows.github.io/ops-201-guide/curriculum/class-05/challenges/demo/bash.html
+# https://www.digitalocean.com/community/tutorials/how-to-use-bash-s-job-control-to-manage-foreground-and-background-processes
 
-
+command ping -i 5 google.com &
 ps -aux
 echo # adds line
 echo # adds line
@@ -29,12 +31,12 @@ read PID
 # do
   echo "$PID will be terminted"
 # done
-  while [ $PID -gt 0 ]
+  while [ $PID -gt 1000 ]
     do
     kill -9 $PID
-  #  echo "Process was successful ended"
     break
   done  
+echo "Process was successful ended"
 # Loop example using the for command
 
 #names="Stan Kyle Cartman"
