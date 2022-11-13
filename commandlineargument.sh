@@ -8,6 +8,8 @@
 # Use $$ to find the process ID of the current shell script
 # $? can be used to print the exit code for our script
 
+# reference site: https://www.digitalocean.com/community/tutorials/read-command-line-arguments-in-shell-scripts
+
 # to run use: ./commandlinearguments.sh learning command line arguments
 
 echo "Script Name: $0"
