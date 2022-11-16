@@ -55,5 +55,16 @@ grep -v "*-display" config.txt >> config1.txt
 sudo lshw | grep -B 1 "*-generic" >> config.txt
 grep -v "*-generic" config.txt >> config1.txt
 
+# Cannot get the syntax to check the config.txt file for items in the array and remove them
+# remove_text=("*-cpu" "*-memory" "*-display" "*-network" "*-generic")
+# for ${remove_text[@]} in ./$config.txt
+#    do
+#        if test -e '$[remove_text[@]]}'
+
+#       then 
+#            grep -v remove_text[@] config.txt > config1.txt
+#        fi
+# done
+ echo "Compilation of lshw is complete"   
 
 # End
