@@ -35,6 +35,7 @@ a="Network Adapter"
 # Main code goes here
 touch config.txt
 touch configreport.txt
+# touch finalconfig.txt
 
 echo $b > configreport.txt
 
