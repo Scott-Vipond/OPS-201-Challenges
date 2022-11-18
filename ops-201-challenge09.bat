@@ -33,9 +33,11 @@
 
 :: Output all events from the System event log that occurred in the last 24 hours
 :: to a file on your desktop named last_24.txt
-$Begin = Get-Date -Date '11/17/2022 00:00:00'
-$End = Get-Date -Date '11/17/2022 23:59:59'
-Get-EventLog -LogName System -After $Begin -Before $End >C:\Users\admin\Desktop\last_24.txt
+:: $Begin = Get-Date -Date '11/17/2022 00:00:00'
+:: $End = Get-Date -Date '11/17/2022 23:59:59'
+:: Get-EventLog -LogName System -After $Begin -Before $End >C:\Users\admin\Desktop\last_24.txt
+
+Get-EventLog -LogName System -After (Get-Date).AddDays(-1) >C:\Users\admin\Desktop\last_24.txt
 
 
 :: Output all “error” type events from the System event log to a file on your desktop named errors.txt
