@@ -31,10 +31,10 @@
 :: Main code goes here
 
 :: Print to the terminal screen all active processes ordered by highest CPU time consumption at the top.
-Get-Process | Sort-Object -Property 'CPU' -Descending :: | Select-Object -First 50
+Get-Process | Sort-Object -Property 'CPU' -Descending
 
 :: Print to the terminal screen all active processes ordered by highest Process Identification Number at the top.
-Get-Process | Sort-Object Id -Descending | Select-Object -First 50
+Get-Process | Sort-Object Id -Descending
 
 :: Print to the terminal screen the top five active processes ordered by highest Working Set (WS(K)) at the top.
 Get-Process | Sort-Object WorkingSet -Descending | Select-Object -First 5
