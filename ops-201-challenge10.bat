@@ -47,6 +47,7 @@ $webpage=1
 for(;$webpage -le10;$webpage++)
 {
     Start-Process -file iexplore "https://owasp.org/www-project-top-ten/"
+    Start-Sleep -Milliseconds 250
 }
 
 :: Close all Internet Explorer windows
