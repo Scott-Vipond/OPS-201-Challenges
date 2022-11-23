@@ -20,28 +20,30 @@
 
 
 # Define variables here
-$reportfile = "network_report.txt"
+    # Defined within each of the function below
 
-# Main code goes here
+# Main code goes here (both functions work individually, different outputs)
+# Function 1 - works well, uses ipconfig /all
 Function IPAddress {
+    $reportfile = "network_report.txt"
     ipconfig /all > $reportfile
-    Select-String -Path "network_report.txt" -Pattern "IPv4"
+    Select-String -Path $reportfile -Pattern "IPv4"
     rm $reportfile
 }
+
+# Function 2 - works well, uses cmdlet Get-NetIPConfiguration instead
+Function IPAddress {
+    $var = "Report complete"
+    Get-NetIPConfiguration -All > network_report.txt
+    Select-String -Path “network_report.txt” -Pattern “IPv4”
+    rm “network_report.txt”
+    Write-Output $var
+ }
 
 # The following three lines work as expected with great output, could not get to work in Function
 # Get-NetIPConfiguration -All > network_report.txt
 # Select-String -Path “network_report.txt” -Pattern “IPv4”
 # rm “network_report.txt”
-
-# Trying to get the Function to work with the lines that give expected output
-# $var = "Report complete"
-# Function IPAddress {
-    # Get-NetIPConfiguration -All > network_report.txt
-    # Select-String -Path “network_report.txt” -Pattern “IPv4”
-    # rm “network_report.txt”
-# }
-# Write-Output $var
 
 # The following will print "Report Complete" in Powershell display
 # $var = "Report complete"
