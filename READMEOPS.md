@@ -1,6 +1,6 @@
-##Challege 14 tasks and inputs:
+## Challege 14 tasks and inputs:
 
-###Task:
+### Task:
 -    •	Write a README.md that explains your repo. Answer the following in your README.md:
 - o	What is this repo all about?
 - o	Why are you learning these skills?
@@ -11,7 +11,7 @@
 - o	What aspect of your shell scripting skillset do you hope to improve next?
 - •	Publish it.
 
-###Inputs:
+### Inputs:
 
 This repo (OPS-201-Challenges) was created for the Code Fellows Ops and Cybersecurity OPS 201 class.  We had daily code challenges to stretch our experience in coding and provide some initial exposure to that aspect of IT.
 
