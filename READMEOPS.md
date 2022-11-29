@@ -22,3 +22,5 @@ I have a hard time picking a “favorite” challenge because to be honest, most
 If given the time/opportunity, I would continue to hone my skills using functions because I see that being the most useful way to automate tasks in Powershell.
 
 Improvement area for me might have to wait for Python in the next classes.  The language seems to be used more often and is more intuitive regarding the syntax.  Otherwise, Powershell would be useful because end-user machines will be running some version of Windows and automation for that keeps me working smarter not harder.
+
+[Challenge 13](./ops-201-challenge13.sh)
